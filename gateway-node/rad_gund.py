@@ -100,7 +100,7 @@ while True:
             oled.fill(0)
             #oled.text("<--",0,0)
             #oled.text(packet_text,0,30)
-            oled.text("---- UVM GUND ----",0,0)
+            oled.text("UVM GUND #"+str(index),0,0)
             oled.text(" radio:"+rssi,0,10)
             oled.show() 
             print('Received: {}'.format(packet_text))
@@ -139,7 +139,8 @@ while True:
             post_data()
             
             oled.text("Posted to FarmOS."+str(s[2]),0,50)
-            oled.show() 
+            oled.show()
+            index=index+1
             time.sleep(60)
       
             

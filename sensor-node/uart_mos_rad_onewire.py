@@ -47,8 +47,8 @@ while True:
 
     send_str=""
 
-    print("\n\nA5:") 
-    A5.value=True 
+    print("\n\nD6:") 
+    D6.value=True 
     led.value=True 
     time.sleep(.3) 
     data = uart.read(32)  # read up to 32 bytes
@@ -74,7 +74,7 @@ while True:
         print('Temperature: {0:0.3f}C'.format(sensor.temperature))
         time.sleep(1.0)
     
-    A5.value=False
+    D6.value=False
     led.value=False
 
     # get temp data here, and add to send_str
