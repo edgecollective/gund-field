@@ -4,6 +4,7 @@ import busio
 import digitalio
 import time
 import adafruit_rfm9x
+import gc
 
 from adafruit_onewire.bus import OneWireBus
 from adafruit_ds18x20 import DS18X20
@@ -90,4 +91,6 @@ while True:
         led.value=False
         time.sleep(.05) 
 
+    gc.collect()
+    
     time.sleep(1)
